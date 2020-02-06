@@ -1,3 +1,3 @@
 # Higher-Diploma
-University of Limerick: Higher Diploma in Software Development
+University of Limerick: Higher Diploma in Software Development <br />
 Edited ReadMe.md file
