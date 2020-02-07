@@ -4,8 +4,6 @@
   * Only use the java.lang package
 
 ## Contents:
-**Workbook.java** - Utilities class for all the desired funtionallity.
-
-**WorkbookDriver.java** - contains the main method to test program behaviour.
-
-**JUnit_WorkbookTest.java** - contains a JUnit tests.
+**Workbook.java** - Utilities class for all the desired funtionallity  
+**WorkbookDriver.java** - contains the main method to test program behaviour  
+**JUnit_WorkbookTest.java** - contains a JUnit tests  
