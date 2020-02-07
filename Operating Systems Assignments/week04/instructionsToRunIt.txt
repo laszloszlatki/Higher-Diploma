@@ -1,0 +1,15 @@
+cd ~/cs4023/labs/week04                          // navigate to the working directory
+
+gcc -c utils.c                                   // create the utils.o file for later linking 
+gcc -c copyFile.c                                // create the copyFile.o file for linking
+
+
+gcc copyFile.o utils.o -o copyFile               // link utils.o and copyFile.o
+
+
+
+./copyFile -f file.txt copy.txt                    // run program with encription
+
+
+
+./copyFile file.txt copy.txt			 // run program wirhout encription

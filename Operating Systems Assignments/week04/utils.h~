@@ -1,0 +1,7 @@
+#ifdef utils
+#define utils.h
+
+
+char flipChar(char c)
+
+#endif

@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>                       // include to be able to call functions
+#include <utils.h>                        // include to be able to use functions I created
+
+int main(int argc, char* argv[])
+{
+  char c;
+  FILE *from;
+  FILE *to;
+  int flipping;                          // declaring flipping variable (will be 0 or 1)
+
+  flipping = (strcmp(argv[1], "-f") == 0);  // check if first arg is "-f". 0 if equal
+  from = fopen(argv[1], "r");               // open file entered in first arg
+  to = fopen(argv[2], "w");                 // write into file entered in second arg
+  if (from == NULL)
+  {
+    perror("file.txt");
+    exit(1);
+  }
+
+  /* file exists, so start reading */
+  while ((c = getc(from)) != EOF)
+    if (flipping)                        // same as: if (flipping == 1)
+      putc(flipChar(c), to);             // write encripted character to the output file
+    else
+      putc(c, to);
+
+  fclose(from);
+  fclose(to);
+
+  exit(0);
+}
+
+char flipChar(char c)
+{
+  if ('a' <= c && c <= 'z')              // character is a valid lower case letter
+    return 'a'-c + 26;                   // 'a'-c is offset, 26 letter in alphabet. i.e. if offset is -3, result is 24
+  else if ('A' <= c && c <= 'Z')         // character is valid upper case
+    return 'A'-c + 26;
+  else if ('0' <= c && c <= '9')         // character is a valid number
+    return '0'-c + 10;                   // 10 number form 0 to 9    
+
+  return c;                              // leave the caracter, if not LC or UC or number
+}

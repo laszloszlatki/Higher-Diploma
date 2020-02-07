@@ -1,0 +1,10 @@
+Hello!
+
+This is my file.txt
+
+I'll use it to flip the caracters
+ 
+a will became z,
+ b will be y and so on.
+0 will became 9, 1 is 8...
+
