@@ -1,6 +1,6 @@
 
 /* 
- * @author	Laszlo Szlatki - 18169902
+ * @author	Laszlo Szlatki
  * @date	22/11/2019
  * @subject	CS4141 assignment
  */
