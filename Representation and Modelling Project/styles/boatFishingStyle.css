@@ -1,0 +1,82 @@
+body{
+	background-color: #D6ECFF;
+	padding: 20px; 
+}
+
+h1{
+	text-align: left;
+	color: #00D09C;	
+}
+h2{
+	text-align: left;
+	color: #00D09C;
+}
+p{
+	text-align: justify;
+}
+
+/*left boat image and link under in the middle*/
+div.boatFishingLeft{
+	 width: 400px;
+	 float: left;
+	 padding-right: 30px;
+	 padding-left: 350px;
+}
+div.boatFishingImageLink{
+	width:image width px;
+	font-size:80%;
+	text-align:center;	
+}
+img.boatFishingImage{
+	width: 380px;
+	height: 253px;
+	border-radius: 20px;
+	border: 1px solid #fff;
+}
+
+/*right boat image and link under in the middle*/
+div.boatFishingRight{
+	 width: 400px;
+	 float: right;
+	 padding-right: 400px;
+	 padding-left: 30px;
+}
+
+/* essentials list*/
+ul.essentials{
+	list-style-type: square;
+	list-style-position: inside;
+	color: #00D09C;
+	margin: 5px;
+	font-size: 20px;
+	font-family: 'Arial';
+	padding 10px;
+}
+ul li {
+  margin: 10px;
+}
+
+p.footer{
+	text-align: left;
+	color: red;
+	padding: 20px;
+}
+/* buttons *//*
+div.buttons{
+	font-size:120%;
+	text-align:center;
+}
+.button {
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 15px 100px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+*/

@@ -1,0 +1,121 @@
+.column {
+
+  float: left;
+  width: 33.33%;
+  /*padding: 5px;*/
+}
+
+
+.para {background-color:#00D09C;
+	    color:black;
+        padding:30px;}
+
+/* Add a black background color to the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+/* Style the links inside the navigation bar */
+.topnav {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 16px 18px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.nav {
+    
+    
+    list-style: none;
+    text-align: center;
+	
+	/*overflow: hidden;
+	border-radius:20px;*/
+}
+
+.nav > li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 0 25px 0 25px;
+    
+}
+
+.nav > li > a{
+    text-decoration: none;
+    color: #00D09C;
+    }
+
+.nav > li > a:hover{
+    color: #00D09C;
+}
+	
+.style {background-color:#00D09C;
+	    color: Black;
+        padding:30px;}
+		
+body {background-color: #D6ECFF;}
+h1   {color: #00D09C;}
+h2 	 {color: #00D09C;}
+h3	 {color: #00D09C;}
+p    {color: #000000;}
+li	 {color: #42AFCA;}
+
+ div.video {
+	float:right;
+	padding: 1px;
+	width: 50%
+	}
+	
+
+
+		
+
+
+
+
+/*div  {background-color:#00D09C;
+	  color:black;
+      padding:20px;
+}*/
+
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+
+
+
+/* Clear floats after image containers */
+/*.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+body {background-color: #2A389C;}
+h1   {color: #9BF777;}
+h2 	 {color: #FF1405;}
+p    {color: #9BF777;}
+li	 {color: #FF1405;}
+}
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats)
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+style="background-color:;color:blue;padding:20px;"*/

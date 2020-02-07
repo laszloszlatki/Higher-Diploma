@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html lang="en">      
+<head>
+
+<meta charset="utf-8">
+<title> Home </title>
+<link rel="stylesheet" type="text/css" href="styles/layout1.css">
+</head>
+
+
+<body>
+<audio autoplay="autoplay">
+    <source src="sound/river.wav" >
+</audio>
+<!-- Chrome blocks autoplay as part of their policy-->
+<h1 class="style1">Fishermans Friend</h1>
+<p><em>An anglers guide to fishing Limerick and Clare</em></p>
+
+<ul class="nav">
+<li><a href="index.html">Home</a> 
+<li><a href="CoarseFishing.html">Coarse Fishing</a>
+<li><a href="GameFishing.html">Game Fishing</a>
+<li><a href="Tips.html">Tips</a>
+<li><a href="Recipe.html">Recipe</a>
+<li><a href="videos.html">Video</a>
+
+<li><a href="contact.html">Contact Us</a>
+</ul>
+<div class="homepic1">
+
+<h2 class="joke"> Fishing Quote of the week</h2>
+<p><em>"My biggest worry is that my wife (when I'm dead) will sell my fishing gear for what I said I paid for it." ~Koos Brandt</em></p>
+
+</div>
+
+<div class="home">
+    This website is a handy tool for any angler in the Limerick and Clare area but it will also help in any other parts of the country as bait and methods is much the same. We hope to give you the knowledge to have a red letter day and be able to tell a few fisherman tales about "The one that got away". This website will cover 2 different types of fishing. It will show the methods and baits required to catch specific species and locations where you will have the best chance of catching. 
+    
+</div>
+
+
+<div class="homepic2">
+
+<h2 class="joke"> Fishing picture of the week</h2>
+<div class="w3-content w3-section" style="max-width:500px">
+  <img class="mySlides" src="Images/fish1.jpg" height="450" width="450" style="padding:30px">
+  <img class="mySlides" src="Images/fish2.jpg" height="450" width="450" style="padding:30px">
+  <img class="mySlides" src="Images/fish3.jpg" height="450" width="450" style="padding:30px">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 5000); // Change image every 7 seconds
+}
+</script>
+</div> 
+
+<div class="home">
+<h2 class="joke"> Fishing video of the week</h2>
+<video width="520" height="440" controls>
+  <source src="Video/trout.mp4" type="video/mp4">
+</video>
+</div>
+
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<hr>
+<footer>
+    <audio controls src="sound/river.wav" float right></audio>
+  <p>Posted by: Fisherman's Friend<br>
+	Contact us:<br>
+	<a href="mailto:12174521@studentmail.ul.ie">Michelle Hourihan Watanabe</a><br>
+	<a href="mailto:19225539@studentmail.ul.ie">Patrick James O'Neill </a><br>
+	<a href="mailto:19212941@studentmail.ul.ie">  Richard O'Brien </a><br>
+	<a href="mailto:18169902@studentmail.ul.ie">  Laszlo Szlatki</a><br>
+	
+  </p>
+  
+</footer> 
+</body>
+
+
+
+
+</html>
