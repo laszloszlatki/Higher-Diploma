@@ -42,7 +42,6 @@ public class Hand {
 		return myHand;
 	}
 
-	// https://stackoverflow.com/questions/608915/need-help-determining-poker-hand-one-pair
 	// all the below methods require sorted hands
 	private boolean hasHighCard(List<Card> sortedHand) {
 		highestCard = ((Card) sortedHand.get(4)).getRank();
