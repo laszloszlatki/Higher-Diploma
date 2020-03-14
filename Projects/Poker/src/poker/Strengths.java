@@ -1,5 +1,6 @@
 /**
  * enum to hold all possible strengths
+ * in ascending order
  * */
 
 package poker;

@@ -31,9 +31,9 @@ public class Rules {
 	/*
 	 * method to decide on winner of the 2 hands according to rules above
 	 * 
-	 * @param myHand
+	 * @param: one of the hands to be compared
 	 * 
-	 * @param yourHand
+	 * @param: the other hand to be compared
 	 * 
 	 * @return the winning hand
 	 */
@@ -42,7 +42,7 @@ public class Rules {
 		Hand winner = null;
 		Strengths myStrength = myHand.handStrength(myHand.getHand());
 		Strengths yourStrength = yourHand.handStrength(yourHand.getHand());
-		// strength hanked higher in the enum wins
+		// strength ranked higher in the enum wins
 		if (myStrength.ordinal() > yourStrength.ordinal()) {
 			winner = myHand;
 		} else if (myStrength.ordinal() < yourStrength.ordinal()) {

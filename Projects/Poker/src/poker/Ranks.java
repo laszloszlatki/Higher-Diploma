@@ -1,5 +1,6 @@
 /*
- * enum to hold all available suits
+ * enum to hold all available ranks
+ * in order of strength
  * */
 
 package poker;

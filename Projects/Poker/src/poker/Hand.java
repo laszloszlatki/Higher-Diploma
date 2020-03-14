@@ -11,6 +11,7 @@ import java.util.List;
 /*
  * Hand of cards has an array of 5 cards.
  * the top 5 cards of a shuffled stack
+ * Contains methods to check greatest strength, highest and second highest card
  * */
 public class Hand {
 
@@ -42,28 +43,50 @@ public class Hand {
 		return myHand;
 	}
 
+	// based on -
+	// https://stackoverflow.com/questions/608915/need-help-determining-poker-hand-one-pair
 	// all the below methods require sorted hands
+	/*
+	 * check for highest rank if no valuable combination of cards
+	 * 
+	 * @param: list of cards in the hand
+	 * 
+	 * @return: always return true, there always a highest card in the hand
+	 */
 	private boolean hasHighCard(List<Card> sortedHand) {
 		highestCard = ((Card) sortedHand.get(4)).getRank();
 		secondHighestCard = ((Card) sortedHand.get(3)).getRank();
 		return true;
 	}
 
-	// check if hand has pairs
+	/*
+	 * check if hand has a pair
+	 * 
+	 * @param: list of cards in the hand
+	 * 
+	 * @return: return true, if there is at least one pair. false otherwise
+	 */
 	private boolean hasPair(List<Card> sortedHand) {
 		for (int i = 1; i < 5; i++) {
 			if (((Card) sortedHand.get(i)).getRank() == ((Card) sortedHand.get(i - 1)).getRank()) {
 				highestCard = ((Card) sortedHand.get(i)).getRank();
-				if(i != 4) {
+				if (i != 4) {
 					secondHighestCard = ((Card) sortedHand.get(i)).getRank();
-				} else secondHighestCard = ((Card) sortedHand.get(i-2)).getRank();
+				} else
+					secondHighestCard = ((Card) sortedHand.get(i - 2)).getRank();
 				return true;
 			}
 		}
 		return false;
 	}
 
-	// check if hand has 2 pairs
+	/*
+	 * check if hand has two pairs
+	 * 
+	 * @param: list of cards in the hand
+	 * 
+	 * @return: return true, if there is at least two pairs. false otherwise
+	 */
 	private boolean isTwoPair(List<Card> sortedHand) {
 		if (((Card) sortedHand.get(0)).getRank() == ((Card) sortedHand.get(1)).getRank()
 				&& ((Card) sortedHand.get(2)).getRank() == ((Card) sortedHand.get(3)).getRank()
@@ -87,6 +110,14 @@ public class Hand {
 		return false;
 	}
 
+	/*
+	 * check if hand has three of the same rank
+	 * 
+	 * @param: list of cards in the hand
+	 * 
+	 * @return: return true, if there is at least three of the same rank. false
+	 * otherwise
+	 */
 	private boolean isTrips(List<Card> sortedHand) {
 		if (((Card) sortedHand.get(0)).getRank() == ((Card) sortedHand.get(2)).getRank()
 				&& ((Card) sortedHand.get(0)).getRank() != ((Card) sortedHand.get(3)).getRank()
@@ -112,6 +143,13 @@ public class Hand {
 		return false;
 	}
 
+	/*
+	 * check if hand has full house (a pair and a trips)
+	 * 
+	 * @param: list of cards in the hand
+	 * 
+	 * @return: return true, if there is a full house. false otherwise
+	 */
 	private boolean isBoat(List<Card> sortedHand) {
 		if (((Card) sortedHand.get(0)).getRank() == ((Card) sortedHand.get(1)).getRank()
 				&& ((Card) sortedHand.get(2)).getRank() == ((Card) sortedHand.get(3)).getRank()
@@ -129,6 +167,13 @@ public class Hand {
 		return false;
 	}
 
+	/*
+	 * check if hand has poker (four of the same rank)
+	 * 
+	 * @param: list of cards in the hand
+	 * 
+	 * @return: return true, if there is four of the same rank. false otherwise
+	 */
 	private boolean isQuads(List<Card> sortedHand) {
 		if (((Card) sortedHand.get(1)).getRank() == ((Card) sortedHand.get(2)).getRank()
 				&& ((Card) sortedHand.get(2)).getRank() == ((Card) sortedHand.get(3)).getRank()
@@ -146,6 +191,13 @@ public class Hand {
 		return false;
 	}
 
+	/*
+	 * check if hand has straight (5 consecutive ranks)
+	 * 
+	 * @param: list of cards in the hand
+	 * 
+	 * @return: return true, if there is a straight. false otherwise
+	 */
 	private boolean isStraight(List<Card> sortedHand) {
 		// .ordinal() uses the rank position from the Ranks enum
 		if (((Card) sortedHand.get(0)).getRank().ordinal() == ((Card) sortedHand.get(4)).getRank().ordinal() - 4) {
@@ -155,6 +207,13 @@ public class Hand {
 		return false;
 	}
 
+	/*
+	 * check if hand has flush (all cards have the same suit)
+	 * 
+	 * @param: list of cards in the hand
+	 * 
+	 * @return: return true, if there is a flush. false otherwise
+	 */
 	private boolean isFlush(List<Card> sortedHand) {
 		if (((Card) sortedHand.get(0)).getSuit() == ((Card) sortedHand.get(1)).getSuit()
 				&& ((Card) sortedHand.get(1)).getSuit() == ((Card) sortedHand.get(2)).getSuit()
@@ -172,7 +231,7 @@ public class Hand {
 	 * 
 	 * @param: list of sorted cards in the hand
 	 * 
-	 * @return: string representation of highest card combination
+	 * @return: highest strength of the hand
 	 */
 	public Strengths handStrength(List<Card> sortedHand) {
 
@@ -222,6 +281,13 @@ public class Hand {
 		return result;
 	}
 
+	/*
+	 * overriding Object's equals method to decide if two hands are the same
+	 * 
+	 * @param: object - a hand of cards this time
+	 * 
+	 * @return: true if all cards are the same in each hand. False otherwise
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -242,5 +308,4 @@ public class Hand {
 			return false;
 		return true;
 	}
-	
 }

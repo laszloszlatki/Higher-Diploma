@@ -14,7 +14,7 @@ import poker.Suits;
  * a value.
 */
 
-// card has to implement Comparable to allow sorting later
+// card has to implement Comparable to allow comparing later
 public class Card implements Comparable<Card> {
 
 	private Suits suit;
@@ -51,14 +51,14 @@ public class Card implements Comparable<Card> {
 	}
 
 	/*
-	 * compareTo from interface helps ordering cards comparing is done as per
+	 * compareTo from Comparable interface helps ordering cards comparing is done as per
 	 * position in the enum
 	 * 
 	 * @param: the card to be compared to
 	 * 
-	 * @return: 1 if rank or suit is greater than the one we are comparing to
+	 * @return: 1 if rank (or suit) is greater than the one we are comparing to
 	 * 
-	 * @return: -1 if rank or suit is smaller than the one we are comparing to
+	 * @return: -1 if rank (or suit) is smaller than the one we are comparing to
 	 * 
 	 * @return: 0 if both cards are the same
 	 */
@@ -75,7 +75,7 @@ public class Card implements Comparable<Card> {
 	}
 
 	/*
-	 * overriding Object's toString() to display card in a nice manner
+	 * overriding Object's toString() to display card in the requested format
 	 * 
 	 * @return: String representation of the card
 	 */
