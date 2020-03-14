@@ -43,8 +43,6 @@ public class Hand {
 		return myHand;
 	}
 
-	// based on -
-	// https://stackoverflow.com/questions/608915/need-help-determining-poker-hand-one-pair
 	// all the below methods require sorted hands
 	/*
 	 * check for highest rank if no valuable combination of cards
