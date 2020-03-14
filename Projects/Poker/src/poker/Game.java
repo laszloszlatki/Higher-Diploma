@@ -66,37 +66,6 @@ public class Game {
 		// announce winner
 		JOptionPane.showMessageDialog(null, "The winner is player " + winningHand + " with: " + winner);
 
-//		// create 2 hand from same deck
-//		Hand myHand = new Hand(deck);
-//		Hand yourHand = new Hand(deck);
-//
-//		// display hand 1
-//		for (Card c : myHand.getHand()) {
-//			System.out.println(c);
-//		}
-//		System.out.println(myHand.handStrength(myHand.getHand()) + "\n");
-//
-//		// display hand 2
-//		for (Card c : yourHand.getHand()) {
-//			System.out.println(c);
-//		}
-//		System.out.println(yourHand.handStrength(yourHand.getHand()));
-//
-//		// pass the 2 hands to Rules.checkWinner() to decide winner
-//		Hand winner = Rules.checkWinner(myHand, yourHand);
-//
-//		// announce the winner
-//		if (winner == myHand) {
-//			JOptionPane.showMessageDialog(null, "The winner is player one with: " + winner);
-//			System.out.println("The winner is player one with: " + winner);
-//
-//		} else if (winner == yourHand) {
-//			JOptionPane.showMessageDialog(null, "The winner is player two with: " + winner);
-//			System.out.println("The winner is player two with: " + winner);
-//		} else {
-//			System.out.println("draw");
-//		}
-
 	}
 
 	// method to create a hand
