@@ -1,0 +1,47 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+/*whole website will be contained in this wrapper*/
+#wrapper{
+    width:1000px;
+    margin:10px auto; /*centered*/
+    background:#f1f1f1;
+    padding:20px;
+}
+.chat_wrapper{ /*. if user defined class*/
+    width:70%;
+    margin:10px auto; /*centered*/
+    background:#ffffff;
+}
+#chat{ /*# if user defined id*/
+    min-height:300px;
+    height:300px;
+    overflow:auto;  /*automatically add scroll bar if messages wont fit in window*/
+    border:1px solid #b3b3b3;
+    padding:10px;
+}
+.textarea{
+    width:96%;
+    border:1px solid #b3b3b3;
+    outline:none;
+    padding:10px;
+    margin-top:10px;
+}
+.my-message{
+    padding:5px 0px 5px 0px;
+    border:1px solid #b3b3b3;
+    
+}
+.my-message span{
+    float: right;
+   
+}
+
+.notMy-message{
+    padding:5px 0px 5px 0px;
+    border:1px solid #b3b3b3;
+}
+.notMy-message span{
+    float: right;
+}
